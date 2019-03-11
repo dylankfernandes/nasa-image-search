@@ -1,0 +1,9 @@
+@import './reset.scss';
+@import './variables.scss';
+@import './mixins.scss';
+
+// Import page styles
+@import '../pages/Home/home.imports.scss';
+
+// Import component styles
+@import '../components/Navbar/navbar.imports.scss';

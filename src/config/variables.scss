@@ -1,0 +1,33 @@
+/* variables.scss */
+
+/*
+Colors
+Light and dark shades of colors generated from http://www.0to255.com/
+*/
+
+$light-nasa-red: #fc5a43;
+$nasa-red: #fc3d21;
+$dark-nasa-red: #f82303;
+$light-nasa-blue: #0d4ab1;
+$nasa-blue: #0b3d91;
+$dark-nasa-blue: #093071;
+$primary-black: #222226;
+$primary-gray: #444444;
+
+/*
+Fonts
+Imported from google fonts
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway');
+$montserrat: 'Montserrat', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+$raleway: 'Raleway', sans-serif;
+
+$text-sm: 1rem;
+$text-md: 1.2rem;
+$text-lg: 1.4rem;
+
+/*
+Spacing and sizing
+*/

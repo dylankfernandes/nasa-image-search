@@ -1,3 +1,8 @@
 .home {
-  
+  height: 100%;
+  width: 100%;
+  background-color: $pitch-black;
+  .home__content {
+    padding: 75px;
+  }
 }

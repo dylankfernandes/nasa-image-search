@@ -1,0 +1,15 @@
+.search-grid {
+  width: 100%;
+  .search-grid__title {
+    @include title();
+    display: flex;
+    justify-content: center;
+  }
+  .search-grid__content {
+    display: grid;
+    width: 75%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    margin: 0 auto;
+  }
+}

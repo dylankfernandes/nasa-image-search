@@ -1,0 +1,67 @@
+.header {
+  width: 100%;
+  background-image: url('/assets/background/mars2.jpg'); 
+  height: 300px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .header__content {
+    * {
+      position: relative;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .header__input {
+      background-color: transparent;
+      color: $white;
+      font-family: $montserrat;
+      border-radius: 3px;
+      border: 2px solid $white;
+      &::placeholder {
+        color: $white;
+      }
+    }
+    .header__title {
+      color: white;
+      font-family: $open-sans;
+      font-size: $text-title;
+      margin-bottom: 20px;;
+    }
+    .header__search {
+      color: $white;
+      padding: 5px 10px;
+      display: block;
+      margin-bottom: 20px;
+      font-size: $text-md;
+    }
+    .header__options {
+      margin-bottom: 30px;
+      color: $white;
+      font-family: $montserrat;
+      input {
+        padding: 3px 5px;
+        margin-right: 5px;
+        margin-left: 8px;
+        font-size: $text-sm;
+      }
+    }
+    .header__buttons a {
+      padding: 10px 20px;
+      margin-right: 10px;
+      margin-left: 10px;
+      text-decoration: none;
+      background-color: $nasa-red;
+      font-family: $open-sans;
+      border-radius: 3px;
+      color: $white;
+      transition: 0.4s;
+      &:hover {
+        background-color: $dark-nasa-red;
+      }
+    }
+  }
+}

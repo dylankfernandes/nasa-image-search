@@ -1,15 +1,15 @@
 .search-grid {
   width: 100%;
+  background-color: $primary-black;
   .search-grid__title {
     @include title();
     display: flex;
     justify-content: center;
+    margin-top: 50px;
   }
   .search-grid__content {
-    display: grid;
     width: 75%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 50px;
     margin: 0 auto;
+    padding-bottom: 50px;
   }
 }

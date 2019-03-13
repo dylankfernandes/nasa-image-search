@@ -1,7 +1,9 @@
 .header {
   width: 100%;
   background-image: url('/assets/background/mars2.jpg'); 
-  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  height: 350px;
   display: flex;
   flex: 1;
   align-items: center;
@@ -15,6 +17,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: $text-md;
     .header__input {
       background-color: transparent;
       color: $white;
@@ -35,32 +38,25 @@
       color: $white;
       padding: 5px 10px;
       display: block;
-      margin-bottom: 20px;
-      font-size: $text-md;
+      width: 80%;
     }
     .header__options {
       margin-bottom: 30px;
       color: $white;
       font-family: $montserrat;
+      .header__options-title {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .header__options-group {
+        display: block;
+        margin-bottom: 15px;
+      }
       input {
         padding: 3px 5px;
         margin-right: 5px;
         margin-left: 8px;
         font-size: $text-sm;
-      }
-    }
-    .header__buttons a {
-      padding: 10px 20px;
-      margin-right: 10px;
-      margin-left: 10px;
-      text-decoration: none;
-      background-color: $nasa-red;
-      font-family: $open-sans;
-      border-radius: 3px;
-      color: $white;
-      transition: 0.4s;
-      &:hover {
-        background-color: $dark-nasa-red;
       }
     }
   }

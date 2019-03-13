@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from '../../components/Header/Header';
-import ImageGrid from '../../components/ImageGrid/ImageGrid';
+import SearchGrid from '../SearchGrid';
 
 const Home = () => (
   <div className="home">
     <Header />
     <div className="home__content">
-      <ImageGrid />
+      <div><h2>Search to see some awesome photos!</h2></div>
     </div>
   </div>
 )

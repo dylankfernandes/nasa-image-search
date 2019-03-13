@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import moment from 'moment'
+import Button from '../Button';
 
 class Header extends Component {
   state = {
@@ -14,13 +15,20 @@ class Header extends Component {
           <h1 className="header__title">NASA Image Search</h1>
           <input className="header__input header__search" placeholder="Search the archives..." />
           <div className="header__options">
-            <label>Date Range: </label>
-            <input className="header__input" id="begin" placeholder={moment(this.state.beginDate).format('M/D/Y')} /> to
-            <input className="header__input" id="end" placeholder={moment(this.state.endDate).add(1, 'days').format('M/D/Y')} />
+            <center><h3 className="header__options-title">Advanced Options</h3></center>
+            <div className="header__options-group">
+              <label>Date Range: </label>
+              <input className="header__input" id="begin" placeholder={moment(this.state.beginDate).format('M/D/Y')} /> to
+              <input className="header__input" id="end" placeholder={moment(this.state.endDate).add(1, 'days').format('M/D/Y')} />
+            </div>
+            <div className="header__options-group">
+              <label>Location: </label>
+              <input className="header__input" placeholder="Enter a location here..." />
+            </div>
           </div>
           <div class="header__buttons">
-            <a href="google.com">Favorites</a>
-            <a href="google.com">View Advanced Options</a>
+            <Button link="google.com">Search</Button>
+            <Button secondary link="google.com">See Your Favorites</Button>
           </div>
         </div>
       </div>

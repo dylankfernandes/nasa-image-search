@@ -1,0 +1,20 @@
+.button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  background-color: $nasa-red;
+  font-family: $open-sans;
+  border-radius: 3px;
+  color: $white;
+  transition: 0.4s;
+  &:hover {
+    background-color: $dark-nasa-red;
+  }
+  &.button--blue {
+    background-color: $nasa-blue;
+  }
+  &.button--blue:hover {
+    background-color: $dark-nasa-blue;
+  }
+}

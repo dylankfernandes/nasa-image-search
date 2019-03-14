@@ -1,0 +1,15 @@
+.item {
+  height: 100%;
+  width: 100%;
+  background-color: $pitch-black;
+
+  .item__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    min-height: 400px;
+
+    
+  }
+}

@@ -1,15 +1,36 @@
 .item {
-  height: 100%;
-  width: 100%;
-  background-color: $pitch-black;
-
+  @include page();
+  .item__title {
+    @include title();
+    margin-top: 0px;
+  }
   .item__content {
+    @include page__content();
+    margin-top: 50px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    min-height: 400px;
-
-    
+    flex: 1;
+  }
+  .item__image {
+    flex: 2;
+    margin-right: 10px;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .item__desc {
+    @include text();
+    margin-left: 10px;
+    line-height: 30px;
+    flex: 2;
+    position: relative;
+  }
+  .item__footer {
+    position: absolute;
+    bottom: 5px;
+    * {
+      margin-right: 20px;
+    }
   }
 }

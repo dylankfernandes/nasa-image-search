@@ -2,11 +2,12 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-// Import page styles
-@import '../pages/Home/home.imports.scss';
-@import '../pages/SearchGrid/search-grid.imports.scss';
-
 // Import component styles
 @import '../components/Header/header.imports.scss';
 @import '../components/ImageGrid/image-grid.imports.scss';
 @import '../components/Button/button.imports.scss';
+
+// Import page styles
+@import '../pages/Home/home.imports.scss';
+@import '../pages/SearchGrid/search-grid.imports.scss';
+@import '../pages/Item/item.imports.scss';

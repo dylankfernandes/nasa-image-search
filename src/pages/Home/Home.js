@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from '../../components/Header/Header';
-import SearchGrid from '../SearchGrid';
 
 const Home = () => (
   <div className="home">

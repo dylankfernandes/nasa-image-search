@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Home from './pages/Home/';
-import SearchGrid from './pages/SearchGrid';
-import Item from './pages/Item';
+import AppRouter from './config/router'
 
 import './config/main.scss';
 
-ReactDOM.render(<Item />, document.getElementById('root'));
+ReactDOM.render(<AppRouter />, document.getElementById('root'));

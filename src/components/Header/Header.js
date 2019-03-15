@@ -27,8 +27,8 @@ class Header extends Component {
             </div>
           </div>
           <div class="header__buttons">
-            <Button link="google.com">Search</Button>
-            <Button secondary link="google.com">See Your Favorites</Button>
+            <Button link="/search">Search</Button>
+            <Button secondary link="/">See Your Favorites</Button>
           </div>
         </div>
       </div>

@@ -3,7 +3,6 @@
   font-size: $text-lg;
   color: $white;
   margin-bottom: 30px;
-  margin-top: 50px;
 }
 
 @mixin text {
@@ -13,6 +12,7 @@
 }
 
 @mixin page {
+  padding-top: 50px;
   height: 100%;
   width: 100%;
   background-color: $pitch-black;

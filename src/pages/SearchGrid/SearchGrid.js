@@ -6,7 +6,6 @@ class SearchGrid extends Component {
   render() {
     return (
       <div className="search-grid">
-        <Header />
         <h1 className="search-grid__title">Search Results</h1>
         <div className="search-grid__content">
           <ImageGrid />

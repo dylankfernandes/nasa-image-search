@@ -1,5 +1,5 @@
 import React from 'react'
-import ImageGridItem from '../ImageGridItem/ImageGridItem';
+import ImageCard from '../ImageGridItem/ImageCard';
 
 const ImageGrid = (props) => {
   const data = Array.from(props.data)
@@ -8,7 +8,7 @@ const ImageGrid = (props) => {
   const elements = data.map(item => {
     const imageURL = item.links[0].href
     const id = item.href;
-    return <ImageGridItem key={btoa(id)} link={`/image/${btoa(id)}`} imageURL={imageURL} />
+    return <ImageCard key={btoa(id)} link={`/image/${btoa(id)}`} imageURL={imageURL} />
   })
   return <div className="image-grid">{elements}</div>
 }

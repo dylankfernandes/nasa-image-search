@@ -1,22 +1,20 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import ImageGrid from '../../components/ImageGrid/'
-import Header from '../../components/Header'
-import API_KEY from '../../config/api-key'
+// import API_KEY from '../../config/api/api-key'
 
 class SearchGrid extends Component {
 
   state = {
-    data: ''
+    data: [],
+    currentSearch: 'earth'
   }
 
-  componentWillMount() {
-    var url = 'https://api.nasa.gov/planetary/apod?api_key=' + API_KEY
+  componentDidMount() {
+    var url = `https://images-api.nasa.gov/search?q=${this.state.currentSearch}`
     axios.get(url)
       .then(res => {
-        this.setState({
-          data: res.data,
-        })
+        this.setState({ data: res.data.collection.items })
       })
       .catch(err => console.log(err))
   }
@@ -26,7 +24,7 @@ class SearchGrid extends Component {
       <div className="search-grid">
         <h1 className="search-grid__title">Search Results</h1>
         <div className="search-grid__content">
-          <ImageGrid />
+          <ImageGrid data={this.state.data} currentSearch={this.state.currentSearch} />
         </div>
       </div>
     )

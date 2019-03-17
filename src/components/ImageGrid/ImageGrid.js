@@ -1,40 +1,16 @@
 import React from 'react'
+import ImageGridItem from '../ImageGridItem/ImageGridItem';
 
-const ImageGrid = ({ data }) => {
-  return (
-    <div className="image-grid">
-      <div className="image-grid__item">
-        <a href="google.com">
-          <img src={require('../../assets/background/mars2.jpg')} alt="" />
-        </a>
-      </div>
-      <div className="image-grid__item">
-        <a href="google.com">
-          <img src={require('../../assets/background/mars2.jpg')} alt="" />
-        </a>
-      </div>
-      <div className="image-grid__item">
-        <a href="google.com">
-          <img src={require('../../assets/background/mars2.jpg')} alt="" />
-        </a>
-      </div>
-      <div className="image-grid__item">
-        <a href="google.com">
-          <img src={require('../../assets/background/mars2.jpg')} alt="" />
-        </a>
-      </div>
-      <div className="image-grid__item">
-        <a href="google.com">
-          <img src={require('../../assets/background/mars2.jpg')} alt="" />
-        </a>
-      </div>
-      <div className="image-grid__item">
-        <a href="google.com">
-          <img src={require('../../assets/background/mars2.jpg')} alt="" />
-        </a>
-      </div>
-    </div>
-  )
+const ImageGrid = (props) => {
+  const data = Array.from(props.data)
+  console.log(data);
+
+  const elements = data.map(item => {
+    const imageURL = item.links[0].href
+    const id = item.href;
+    return <ImageGridItem key={btoa(id)} link={`/image/${btoa(id)}`} imageURL={imageURL} />
+  })
+  return <div className="image-grid">{elements}</div>
 }
 
 export default ImageGrid

@@ -25,8 +25,11 @@ class Header extends Component {
               <label>Location: </label>
               <input className="header__input" placeholder="Enter a location here..." />
             </div>
+            <select name="" id="" className="header__input header__archive-selector">
+              <option value="">Select an archive to search...</option>
+            </select>
           </div>
-          <div class="header__buttons">
+          <div className="header__buttons">
             <Button link="/search">Search</Button>
             <Button secondary link="/">See Your Favorites</Button>
           </div>

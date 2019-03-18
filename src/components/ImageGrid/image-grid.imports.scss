@@ -3,19 +3,4 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 50px;
   margin: 0 auto;
-
-  .image-grid__title {
-    font-family: $open-sans;
-  }
-
-  .image-grid__item {
-    * {
-        position: relative;
-    }
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
 }

@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 import ImageGrid from '../../components/ImageGrid/'
-// import API_KEY from '../../config/api/api-key'
+import Header from '../../components/Header/'
+
+import axios from 'axios'
+
 
 class SearchGrid extends Component {
 
@@ -21,10 +23,13 @@ class SearchGrid extends Component {
 
   render() {
     return (
-      <div className="search-grid">
-        <h1 className="search-grid__title">Search Results</h1>
-        <div className="search-grid__content">
-          <ImageGrid data={this.state.data} currentSearch={this.state.currentSearch} />
+      <div>
+        <Header />
+        <div className="search-grid">
+          <h1 className="search-grid__title">Search Results</h1>
+          <div className="search-grid__content">
+            <ImageGrid data={this.state.data} currentSearch={this.state.currentSearch} />
+          </div>
         </div>
       </div>
     )

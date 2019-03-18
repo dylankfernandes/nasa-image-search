@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 
 import './config/main.scss';
 
-import App from './pages/App'
+import AppRouter from './router'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<AppRouter />, document.getElementById('root'));

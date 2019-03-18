@@ -1,5 +1,5 @@
 import React from 'react'
-import ImageCard from '../ImageGridItem/ImageCard';
+import ImageCard from '../ImageCard/';
 
 const ImageGrid = (props) => {
   const data = Array.from(props.data)

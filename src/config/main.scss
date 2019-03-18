@@ -6,9 +6,8 @@
 @import '../components/Header/header.imports.scss';
 @import '../components/ImageGrid/image-grid.imports.scss';
 @import '../components/Button/button.imports.scss';
-@import '../components/ImageGridItem/image-grid-item.imports.scss';
+@import '../components/ImageCard/image-card.imports.scss';
 
 // Import page styles
-@import '../pages/Home/home.imports.scss';
 @import '../pages/SearchGrid/search-grid.imports.scss';
-@import '../pages/Item/item.imports.scss';
+@import '../pages/Favorites/favorites.imports.scss';

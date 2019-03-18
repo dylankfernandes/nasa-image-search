@@ -4,7 +4,10 @@ import SearchGrid from './pages/SearchGrid/SearchGrid';
 
 class App extends Component {
   state = {
-    currentSearch: '',
+    currentSearch: {
+      query: '',
+      beginDate: '',
+    },
     data: ''
   }
 

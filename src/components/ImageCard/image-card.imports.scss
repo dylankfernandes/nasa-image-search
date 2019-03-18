@@ -1,11 +1,25 @@
-  .image-card {
-    * {
-      position: relative;
-    }
-
+.image-card {
+  @media (max-width: 600px) {
+    margin-top: 50px;
+  }
+  .image-card__image {
+    height: 300px;
+    margin-bottom : 20px;
     img {
       height: 100%;
       width: 100%;
       object-fit: cover;
     }
   }
+  .image-card__content {
+    .image-card__title {
+      @include title();
+    }
+    .image-card__description {
+      @include text();
+      margin-top: -10px;
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}

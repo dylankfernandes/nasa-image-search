@@ -15,19 +15,16 @@ class Header extends Component {
           <h1 className="header__title">NASA Image Search</h1>
           <input className="header__input header__search" placeholder="Search the archives..." />
           <div className="header__options">
-            <center><h3 className="header__options-title">Advanced Options</h3></center>
+            {/* <center><h3 className="header__options-title">Advanced Options</h3></center> */}
             <div className="header__options-group">
-              <label>Date Range: </label>
-              <input className="header__input" id="begin" placeholder={moment(this.state.beginDate).format('M/D/Y')} /> to
-              <input className="header__input" id="end" placeholder={moment(this.state.endDate).add(1, 'days').format('M/D/Y')} />
+              <label>Date Range (Optional): </label>
+              <input className="header__input" id="begin" placeholder={`e.g. ${moment(this.state.beginDate).format('M/D/Y')}`} /> to
+              <input className="header__input" id="end" placeholder={`e.g. ${moment(this.state.endDate).add(1, 'days').format('M/D/Y')}`} />
             </div>
-            <div className="header__options-group">
+            {/* <div className="header__options-group">
               <label>Location: </label>
               <input className="header__input" placeholder="Enter a location here..." />
-            </div>
-            <select name="" id="" className="header__input header__archive-selector">
-              <option value="">Select an archive to search...</option>
-            </select>
+            </div> */}
           </div>
           <div className="header__buttons">
             <Button link="/search">Search</Button>

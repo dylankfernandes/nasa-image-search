@@ -24,7 +24,6 @@ class SearchGrid extends Component {
   render() {
     return (
       <div>
-        <Header />
         <div className="search-grid">
           <h1 className="search-grid__title">Search Results</h1>
           <div className="search-grid__content">

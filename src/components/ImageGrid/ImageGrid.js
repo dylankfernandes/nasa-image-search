@@ -7,8 +7,9 @@ const ImageGrid = (props) => {
 
   const elements = data.map(item => {
     const imageURL = item.links[0].href
-    const id = item.href;
-    return <ImageCard key={btoa(id)} link={`/image/${btoa(id)}`} imageURL={imageURL} />
+    const title = item.data[0].title;
+    const description = item.data[0].description;
+    return <ImageCard title={title} description={description} imageURL={imageURL} />
   })
   return <div className="image-grid">{elements}</div>
 }

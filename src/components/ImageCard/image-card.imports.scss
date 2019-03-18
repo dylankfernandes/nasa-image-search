@@ -1,10 +1,11 @@
 .image-card {
-  @media (max-width: 600px) {
+  position: relative;
+  // @media (max-width: 600px) {
     margin-top: 50px;
-  }
+  // }
   .image-card__image {
     height: 300px;
-    margin-bottom : 20px;
+    margin-bottom: 20px;
     img {
       height: 100%;
       width: 100%;

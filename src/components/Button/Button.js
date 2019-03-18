@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-const Button = ({ secondary, children }) => {
+const Button = ({ secondary, children, text }) => {
   let classes = secondary ? "button button--blue" : "button"
-  return <button className={classes}>{children}</button>
+  let buttonText = text ? text : children
+  return <button className={classes}>{buttonText}</button>
 }
 
 export default Button

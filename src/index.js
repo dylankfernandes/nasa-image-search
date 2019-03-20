@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom'
 
 import './config/main.scss'
 
-import App from './app'
+import SearchGrid from './pages/SearchGrid'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<SearchGrid />, document.getElementById('root'));

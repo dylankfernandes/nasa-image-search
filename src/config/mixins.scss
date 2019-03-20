@@ -18,11 +18,17 @@
   background-color: $pitch-black;
 }
 
+
 @mixin page__content {
   min-height: 400px;
   width: 75%;
   margin: 0 auto;
   padding-bottom: 50px;
+}
+
+.loading {
+  @include text(); 
+  position: relative;
 }
 
 .overlay {

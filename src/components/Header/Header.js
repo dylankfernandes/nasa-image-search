@@ -37,7 +37,7 @@ class Header extends Component {
               </div>
             </div>
             <center className="header__buttons">
-              <Button onClick={this.props.onSubmit}>Search</Button>
+              <input value="Search" type="submit" className="button" />
             </center>
           </form>
         </div>

@@ -54,12 +54,12 @@
       .header__options-group {
         display: block;
         margin-bottom: 15px;
-        &.header__options-group--start {
-          float: left;
-          @media screen and (max-width: 620px) {
-            float: none;  
-          }
-        }
+        // &.header__options-group--start {
+        //   float: left;
+        //   @media screen and (max-width: 620px) {
+        //     float: none;  
+        //   }
+        // }
       }
       input {
         padding: 3px 5px;

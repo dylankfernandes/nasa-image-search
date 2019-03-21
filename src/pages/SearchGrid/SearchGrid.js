@@ -96,9 +96,9 @@ class SearchGrid extends Component {
       if (!isEmpty(beginDate)) url += `&year_start=${beginDate}`
       if (!isEmpty(endDate)) url += `&year_end=${endDate}`
       if (!isEmpty(location)) url += `&location=${location}`
-      if (!isEmpty(keywords)) url += `&keywords${keywords}`
-      if (!isEmpty(media)) url += `&media_type${media}`
-      if (!isEmpty(title)) url += `&title${title}`
+      if (!isEmpty(keywords)) url += `&keywords=${keywords}`
+      if (!isEmpty(media)) url += `&media_type=${media}`
+      if (!isEmpty(title)) url += `&title=${title}`
     }
 
     if (query.length !== 0) {

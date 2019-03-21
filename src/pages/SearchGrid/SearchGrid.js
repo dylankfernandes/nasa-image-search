@@ -8,6 +8,7 @@ import { isEmpty } from '../../config/utils'
 
 class SearchGrid extends Component {
 
+  // starting state
   state = {
     data: [],
     currentSearch: {
@@ -21,6 +22,8 @@ class SearchGrid extends Component {
     }
   }
 
+  // Each 'onChange' function is copies the initial currentSearch object, 
+  // and then copies the new value in the input bar to that object
   handleSearchChange = event => {
     this.setState({
       currentSearch: {
@@ -90,6 +93,7 @@ class SearchGrid extends Component {
 
     var url = 'https://images-api.nasa.gov/search?q='
 
+    // add the parameters to the url if the search parameter has been given to the user
     if (query.length !== 0) {
       url += query
       if (!isEmpty(beginDate)) url += `&year_start=${beginDate}`
@@ -100,6 +104,7 @@ class SearchGrid extends Component {
       if (!isEmpty(title)) url += `&title=${title}`
     }
 
+    // retrieve the data from the api
     if (query.length !== 0) {
       axios.get(url)
         .then(res => {
@@ -112,12 +117,14 @@ class SearchGrid extends Component {
   }
 
   render() {
+    // if no search results are returned from the NASA API, then reflect that to the user
     let toRender = this.state.data.length !== 0
       ? <ImageGrid data={this.state.data} currentSearch={this.state.currentSearch} />
       : <p className="loading">No Search Results</p>
 
     return (
       <div>
+        {/* pass the current search and 'onChange' functions to the header */}
         <Header
           onSearchChange={this.handleSearchChange}
           onSubmit={this.handleSubmit}

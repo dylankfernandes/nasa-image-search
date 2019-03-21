@@ -9,6 +9,9 @@ const Header = (props) => {
       <div className="header__content">
         <h1 className="header__title">NASA Image Search</h1>
 
+        {/* The search grid component keeps track of all values and changes of the
+        input bars which will be used in search queries. */}
+
         <form onSubmit={props.onSubmit}>
           <center>
             <input

@@ -17,7 +17,7 @@ class SearchGrid extends Component {
       endDate: '',
       location: '',
       keywords: '',
-      media: '',
+      media: 'image',
       title: ''
     }
   }

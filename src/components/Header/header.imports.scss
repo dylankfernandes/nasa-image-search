@@ -3,12 +3,14 @@
   background-image: url('/assets/background/mars2.jpg'); 
   background-size: cover;
   background-position: center center;
-  height: 350px;
+  min-height: 350px;
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
   .header__content {
     * {
       position: relative;
@@ -52,6 +54,12 @@
       .header__options-group {
         display: block;
         margin-bottom: 15px;
+        &.header__options-group--start {
+          float: left;
+          @media screen and (max-width: 620px) {
+            float: none;  
+          }
+        }
       }
       input {
         padding: 3px 5px;
@@ -67,12 +75,6 @@
       font-size: $text-xs;
       option {
         background-color: red;
-      }
-    }
-    .header__buttons {
-      * {
-        margin-left: 10px;
-        margin-right: 10px;
       }
     }
   }

@@ -1,10 +1,11 @@
+import axios from 'axios'
+
 import React, { Component } from 'react'
 import ImageGrid from '../../components/ImageGrid/'
 import Header from '../../components/Header/'
 
-import axios from 'axios'
-import API_KEY from '../../config/api/api-key'
-
+// import API_KEY from '../../config/api/api-key'
+import { isEmpty } from '../../config/utils'
 
 class SearchGrid extends Component {
 
@@ -14,9 +15,11 @@ class SearchGrid extends Component {
       query: '',
       beginDate: '',
       endDate: '',
-      location: ''
-    },
-    render: ''
+      location: '',
+      keywords: '',
+      media: '',
+      title: ''
+    }
   }
 
   handleSearchChange = event => {
@@ -55,23 +58,47 @@ class SearchGrid extends Component {
     })
   }
 
+  handleKeywordsChange = event => {
+    this.setState({
+      currentSearch: {
+        ...this.state.currentSearch,
+        keywords: event.target.value
+      }
+    })
+  }
+
+  handleMediaChange = event => {
+    this.setState({
+      currentSearch: {
+        ...this.state.currentSearch,
+        media: event.target.value
+      }
+    })
+  }
+
+  handleTitleChange = event => {
+    this.setState({
+      currentSearch: {
+        ...this.state.currentSearch,
+        title: event.target.value
+      }
+    })
+  }
+
   handleSubmit = event => {
     event.preventDefault()
-    const { query, beginDate, endDate, location } = this.state.currentSearch;
+    const { query, beginDate, endDate, location, keywords, media, title } = this.state.currentSearch;
 
     var url = 'https://images-api.nasa.gov/search?q='
 
     if (query.length !== 0) {
       url += query
-      if (beginDate.length !== 0) {
-        url += `&year_start=${beginDate}`
-      }
-      if (endDate.length !== 0) {
-        url += `&year_end=${endDate}`
-      }
-      if (location.length !== 0) {
-        url += `&location=${location}`
-      }
+      if (!isEmpty(beginDate)) url += `&year_start=${beginDate}`
+      if (!isEmpty(endDate)) url += `&year_end=${endDate}`
+      if (!isEmpty(location)) url += `&location=${location}`
+      if (!isEmpty(keywords)) url += `&keywords${keywords}`
+      if (!isEmpty(media)) url += `&media_type${media}`
+      if (!isEmpty(title)) url += `&title${title}`
     }
 
     if (query.length !== 0) {
@@ -86,8 +113,10 @@ class SearchGrid extends Component {
   }
 
   render() {
+    let toRender = this.state.data.length !== 0
+      ? <ImageGrid data={this.state.data} currentSearch={this.state.currentSearch} />
+      : <p className="loading">No Search Results</p>
 
-    let toRender = this.state.data.length !== 0 ? <ImageGrid data={this.state.data} currentSearch={this.state.currentSearch} /> : <p className="loading">No Search Results</p>
     return (
       <div>
         <Header
@@ -96,7 +125,10 @@ class SearchGrid extends Component {
           onBeginDateChange={this.handleBeginDateChange}
           onEndDateChange={this.handleEndDateChange}
           onLocationChange={this.handleLocationChange}
-          currentSearch={this.state.currentSearch} />
+          currentSearch={this.state.currentSearch}
+          onKeywordsChange={this.handleKeywordsChange}
+          onMediaChange={this.handleMediaChange}
+          onTitleChange={this.handleTitleChange} />
         <div className="search-grid">
           <h1 className="search-grid__title">Search Results</h1>
           <div className="search-grid__content">

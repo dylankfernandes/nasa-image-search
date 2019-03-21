@@ -9,7 +9,13 @@ class Header extends Component {
         <div className="header__content">
           <h1 className="header__title">NASA Image Search</h1>
           <form onSubmit={this.props.onSubmit}>
-            <center><input value={this.props.currentSearch.query} onChange={this.props.onSearchChange} className="header__input header__search" placeholder="Search the archives..." /></center>
+            <center>
+              <input 
+                value={this.props.currentSearch.query} 
+                onChange={this.props.onSearchChange} 
+                className="header__input header__search" 
+                placeholder="Search the archives..." />
+            </center>
             <div className="header__options">
               <center><h3 className="header__options-title">Advanced Options</h3></center>
               <div className="header__options-group">
@@ -34,6 +40,39 @@ class Header extends Component {
                   placeholder="Enter a location here..."
                   value={this.props.currentSearch.location}
                   onChange={this.props.onLocationChange} />
+              </div>
+              <div className="header__options-group">
+                <label>Location: </label>
+                <input
+                  className="header__input"
+                  placeholder="Search by location here..."
+                  value={this.props.currentSearch.location}
+                  onChange={this.props.onLocationChange} />
+              </div>
+              <div className="header__options-group">
+                <label>Title: </label>
+                <input
+                  className="header__input"
+                  placeholder="Search by title..."
+                  value={this.props.currentSearch.title}
+                  onChange={this.props.onTitleChange} />
+              </div>
+              <div className="header__options-group">
+                <label>Keywords: </label>
+                <input
+                  className="header__input"
+                  placeholder="Search for keywords..."
+                  value={this.props.currentSearch.keywords}
+                  onChange={this.props.onKeywordsChange} />
+              </div>
+              <div className="header__options-group">
+                <label>Media Type: </label>
+                <select
+                  className="header__input"
+                  placeholder="Select a media type..."
+                  value={this.props.currentSearch.media}
+                  onChange={this.props.onMediaChange}>
+                </select>
               </div>
             </div>
             <center className="header__buttons">

@@ -9,7 +9,7 @@ const ImageCard = ({ imageURL, description, title }) => (
     <div className="image-card__content">
       <h2 className="image-card__title">{title}</h2>
       <p className="image-card__description">{description}</p>
-      <Button>Save to Favorites</Button>
+      {/* <Button>Save to Favorites</Button> */}
     </div>
   </div>
 )

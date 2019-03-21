@@ -59,7 +59,7 @@ const Header = (props) => {
             <div className="header__options-group">
               <label>Media Type: </label>
               <select
-                className="header__input"
+                className="header__input header__selector"
                 placeholder="Select a media type..."
                 value={props.currentSearch.media}
                 onChange={props.onMediaChange}>

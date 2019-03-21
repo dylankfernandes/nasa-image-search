@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import ImageGrid from '../../components/ImageGrid/'
 import Header from '../../components/Header/'
 
-// import API_KEY from '../../config/api/api-key'
 import { isEmpty } from '../../config/utils'
 
 class SearchGrid extends Component {
@@ -129,6 +128,7 @@ class SearchGrid extends Component {
           onKeywordsChange={this.handleKeywordsChange}
           onMediaChange={this.handleMediaChange}
           onTitleChange={this.handleTitleChange} />
+
         <div className="search-grid">
           <h1 className="search-grid__title">Search Results</h1>
           <div className="search-grid__content">

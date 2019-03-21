@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Button = ({ secondary, children, text }) => {
+const Button = ({ secondary, children, link }) => {
   let classes = secondary ? "button button--blue" : "button"
-  let buttonText = text ? text : children
-  return <button className={classes}>{buttonText}</button>
+  return link
+    ? <a href={link} className={classes}>{children}</a>
+    : <button className={classes}>{children}</button>
 }
 
 export default Button

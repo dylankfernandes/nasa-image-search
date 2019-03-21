@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import moment from 'moment'
-import Button from '../Button';
+
+import { SubmitButton } from '../Button/';
 
 const Header = (props) => {
   return (
     <div className="header overlay">
       <div className="header__content">
         <h1 className="header__title">NASA Image Search</h1>
+
         <form onSubmit={props.onSubmit}>
           <center>
             <input
@@ -15,6 +17,7 @@ const Header = (props) => {
               className="header__input header__search"
               placeholder="Search the archives..." />
           </center>
+
           <div className="header__options">
             <center><h3 className="header__options-title">Advanced Options</h3></center>
             <div className="header__options-group">
@@ -32,6 +35,7 @@ const Header = (props) => {
                 value={props.currentSearch.endDate}
                 onChange={props.onEndDateChange} />
             </div>
+
             <div className="header__options-group header__options-group--start">
               <label>Location: </label>
               <input
@@ -40,6 +44,7 @@ const Header = (props) => {
                 value={props.currentSearch.location}
                 onChange={props.onLocationChange} />
             </div>
+
             <div className="header__options-group">
               <label>Title: </label>
               <input
@@ -48,6 +53,7 @@ const Header = (props) => {
                 value={props.currentSearch.title}
                 onChange={props.onTitleChange} />
             </div>
+
             <div className="header__options-group header__options-group--start">
               <label>Keywords: </label>
               <input
@@ -56,6 +62,7 @@ const Header = (props) => {
                 value={props.currentSearch.keywords}
                 onChange={props.onKeywordsChange} />
             </div>
+
             <div className="header__options-group">
               <label>Media Type: </label>
               <select
@@ -68,9 +75,7 @@ const Header = (props) => {
               </select>
             </div>
           </div>
-          <center>
-            <input value="Search" type="submit" className="button button--block" />
-          </center>
+          <center><SubmitButton /></center>
         </form>
       </div>
     </div>
